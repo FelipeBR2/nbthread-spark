@@ -40,7 +40,8 @@ class StreamRunner():
         self.thread.watch()
         self.query.awaitTermination()
 
-    def start(self):
+    def start(self, logger_enabled=True):
+        self.log_running = logger_enabled
         self.thread.start()
     
     def stop(self):
